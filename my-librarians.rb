@@ -44,20 +44,14 @@ configure do
   end
 end
 
-get "/" do
-  content_type "text/plain"
-  "You need to supply some parameters"
-end
-
 get "/:type/*" do
-  type = params[:type] # Either subject or liaison
+  type = params[:type] # Either "subject" or "liaison"
   programs = params[:splat][0].downcase.split(",") # splat catches the wildcard
 
-  # Logic:
-  # Make an RSS feed.
-  # Look at the parameters passed in.
-  # See what librarians match.  If they do, add to the feed.
-
+  logger.info "Type: #{type}"
+  logger.info "Programs: #{programs}"
+  
+  # We're going to make an RSS feed, so start it.
   rss = RSS::Maker.make("atom") do |maker|
     # TODO Move these into the config file
     maker.channel.author = "York University Libraries"
@@ -67,7 +61,7 @@ get "/:type/*" do
 
     open(settings.config["spreadsheet_url"]) do |f|
       unless f.status[0] == "200"
-        STDERR.puts f.status
+        logger.warn "Cannot load spreadsheet: #{f.status}"
         # TODO Fail nicely
       else
         CSV.parse(f.read, {:headers => true, :header_converters => :symbol}) do |row|
@@ -82,7 +76,7 @@ get "/:type/*" do
             librarian_programs = codes.downcase.split(",")
             overlap = librarian_programs & programs # Elements common to both arrays
             if ! overlap.empty?
-              # STDERR.puts "Matched #{row[:librarian]}: #{overlap}"
+              logger.debug "Matched #{row[:librarian]}: #{overlap}"
               maker.items.new_item do |item|
                 item.id = row[:librarian].sum.to_s # Checksum, to make a unique ID number
                 item.link = row[:url] || "http://www.library.yorku.ca/"
@@ -95,54 +89,45 @@ get "/:type/*" do
       end
     end
 
-    if maker.items.nil?
+    logger.debug "Items found: #{maker.items.size}"
+
+    if maker.items.size == 0
+      logger.debug "No items found"
       # No matches were found!  Supply the defaults
       # TODO Move all the defaults into the config file
       url = ""
       title = ""
       if type=="subject"
+        # TODO Make it so the choice based on whether it's
+        # subject or faculty happens below, and works like
+        # it does above.  No need for two big blocks.
         programs.each do |program|
           # We're now looping through all of the programs that don't have a known
           # librarian or research help desk.  There will probably only be one
           # but there might be two.
-          faculty = program[0..1]
-          case faculty
-          when "gl" then
-            url = "http://www.library.yorku.ca/cms/frost/"
-            title = "Frost Library research help"
-          when "hh" then
-            url = "http://www.library.yorku.ca/cms/steacie/"
-            title = "Steacie Library research help"
-          when "lw" then
-            url = "http://www.osgoode.yorku.ca/library/what-we-do/reference-research"
-            title = "Law Library research help"
-          when "sb" then
-            url = "http://www.library.yorku.ca/cms/bbl/guides/researchhelp/"
-            title = "Bronfman Library research help"
-          when "sc" then
-            url = "http://www.library.yorku.ca/cms/steacie/"
-            title = "Steacie Library research help"
-          else  # Otherwise, default to Scott (for fa, ap, es)
-            url = "http://www.library.yorku.ca/cms/scottreference/"
-            title = "Scott Library research help"
+          faculty_code = program[0..1]
+          logger.debug "Faculty code: #{faculty_code}"
+          default = settings.config["subject_defaults"].find {|f| f["faculty"] == faculty_code }
+          if default.nil?
+            # None of the known faculties matched, so fall back to the default
+            default = settings.config["subject_defaults"].find {|f| f["faculty"] == "default" }
           end
-
           # Don't list any links twice, so ...
           # Make a list of all of the known titles in the RSS feed so far, and
           # unless the title we want to add is already in the list, add it;
           # but if it is there already, don't add it.
-          titles = rss.items.map {|i| i.title}
+          titles = maker.items.map {|i| i.title}
           # i.title will look like this
           # <title>Librarian Name</title>
           # so we need to match the <title> </title> as well.  Odd.
-          unless titles.any? {|t| "<title>#{title}</title>" =~ /#{t}/}
+          unless titles.any? {|t| "<title>#{default["title"]}</title>" =~ /#{t}/}
             maker.items.new_item do |item|
-              item.link = url
-              item.title = title
+              item.id = default["title"].sum.to_s # Checksum, to make a unique ID number
+              item.link = default["url"]
+              item.title = default["title"]
               item.updated = Time.now.to_s
             end
           end
-
         end
       end
     end
@@ -150,7 +135,14 @@ get "/:type/*" do
   
   content_type 'application/xml'
   rss.to_s
+
 end
+
+get "/*" do
+  content_type "text/plain"
+  "You need to supply some parameters"
+end
+
 
 
 #

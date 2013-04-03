@@ -1,4 +1,57 @@
 {
-  "spreadsheet_url": "https://docs.google.com/spreadsheet/pub?key=0Ao-FPaoAEqtUdDduMXBVWjRDN3lvZlRhRVpHTEczcVE&single=true&gid=0&output=csv",
-  "other": "Another value"
+    "spreadsheet_url": "https://docs.google.com/spreadsheet/pub?key=0Ao-FPaoAEqtUdDduMXBVWjRDN3lvZlRhRVpHTEczcVE&single=true&gid=0&output=csv",
+    "subject_defaults":
+    [
+	{
+	    "faculty": "gl",
+	    "title": "Frost Library research help",
+	    "url": "http://www.library.yorku.ca/cms/frost/"
+	},
+	{
+	    "faculty": "hh",
+	    "title": "Steacie Library research help" ,
+	    "url": "http://www.library.yorku.ca/cms/steacie/"
+	},
+	{
+	    "faculty": "lw",
+	    "title": "Law Library research help",
+	    "url": "http://www.library.yorku.ca/cms/steacie/"
+	},
+	{
+	    "faculty": "sb",
+	    "title": "Bronfman Library research help",
+	    "url": "http://www.library.yorku.ca/cms/steacie/"
+	},
+	{
+	    "faculty": "sc",
+	    "title": "Steacie Library research help",
+	    "url": "http://www.library.yorku.ca/cms/steacie/"
+	},
+	{
+	    "faculty": "default",
+	    "title": "Scott Library research help",
+	    "url": "http://www.library.yorku.ca/cms/scottreference/"
+	}
+    ],
+    "liaison_defaults":
+    [
+	{
+	    "faculty": "gl"
+	},
+	{
+	    "faculty": "hh"
+	},
+	{
+	    "faculty": "lw"
+	},
+	{
+	    "faculty": "sb"
+	},
+	{
+	    "faculty": "sc"
+	},
+	{
+	    "faculty": "default"
+	}
+    ]
 }
