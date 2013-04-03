@@ -65,6 +65,10 @@ open(spreadsheet_url) do |f|
   end
 end
 
+get "/" do
+  "You need to supply some parameters"
+end
+
 get "/:type/*" do
   type = params[:type] # Either subject or liaison
   # programs = params[:splat].downcase.split(",") # splat catches the wildcard
