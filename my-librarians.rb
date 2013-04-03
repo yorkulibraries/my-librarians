@@ -24,13 +24,16 @@
 
 require 'json'
 require 'cgi'
+require 'csv'
 
 require 'rubygems'
 require 'bundler/setup'
-
 require 'sinatra'
+# require 'rack-cache'
+
 require 'nokogiri'
 require 'open-uri'
+
 
 before do
   # Make this the default
@@ -46,8 +49,24 @@ configure do
   end
 end
 
+spreadsheet_url = settings.config["spreadsheet_url"]
+
+open(spreadsheet_url) do |f|
+  unless f.status[0] == "200"
+    STDERR.puts f.status
+    # TODO Fail nicely
+  else
+    CSV.parse(f.read, {:headers => true, :header_converters => :symbol}) do |row|
+      # row[:librarian], row[:subject_codes], row[:liaison_codes] and row[:url] are now
+      # available thanks to those header commands.
+      puts row[:librarian]
+    end
+  end
+end
+
 get "/" do
 
+  courses = params[:courses].downcase.split(",")
 
 end
 

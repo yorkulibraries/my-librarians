@@ -1,4 +1,4 @@
 {
-  "something": "value",
+  "spreadsheet_url": "https://docs.google.com/spreadsheet/pub?key=0Ao-FPaoAEqtUdDduMXBVWjRDN3lvZlRhRVpHTEczcVE&single=true&gid=0&output=csv",
   "other": "Another value"
 }
