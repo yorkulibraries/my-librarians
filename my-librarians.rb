@@ -67,8 +67,23 @@ end
 
 get "/:type/*" do
   type = params[:type] # Either subject or liaison
-  programs = params[:splat].downcase.split(",") # splat catches the wildcard
-  puts programs
+  # programs = params[:splat].downcase.split(",") # splat catches the wildcard
+  # puts programs
+
+  rss = RSS::Maker.make("atom") do |maker|
+    maker.channel.author = "York University Libraries"
+    maker.channel.updated = Time.now.to_s
+    maker.channel.about = "http://www.library.yorku.ca/"
+    maker.channel.title = "My Librarian (York University Libraries)"
+
+    maker.items.new_item do |item|
+      item.link = "Foo"
+      item.title = "Title"
+      item.updated = Time.now.to_s
+    end
+  end
+
+  rss.to_s
 end
 
 
