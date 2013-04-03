@@ -35,12 +35,6 @@ require 'sinatra'
 require 'nokogiri'
 require 'open-uri'
 
-
-before do
-  # Make this the default
-  content_type 'application/xml'
-end
-
 configure do
   begin
     set(:config) { JSON.parse(File.read("config.json")) }
@@ -66,6 +60,7 @@ open(spreadsheet_url) do |f|
 end
 
 get "/" do
+  content_type "text/plain"
   "You need to supply some parameters"
 end
 
@@ -87,6 +82,7 @@ get "/:type/*" do
     end
   end
 
+  content_type 'application/xml'
   rss.to_s
 end
 
