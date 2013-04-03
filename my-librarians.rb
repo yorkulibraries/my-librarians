@@ -25,6 +25,7 @@
 require 'json'
 require 'cgi'
 require 'csv'
+require 'rss'
 
 require 'rubygems'
 require 'bundler/setup'
@@ -37,7 +38,7 @@ require 'open-uri'
 
 before do
   # Make this the default
-  content_type 'application/json'
+  content_type 'application/xml'
 end
 
 configure do
@@ -64,11 +65,12 @@ open(spreadsheet_url) do |f|
   end
 end
 
-get "/" do
-
-  courses = params[:courses].downcase.split(",")
-
+get "/:type/*" do
+  type = params[:type] # Either subject or liaison
+  programs = params[:splat].downcase.split(",") # splat catches the wildcard
+  puts programs
 end
+
 
 #
 # Helper methods
