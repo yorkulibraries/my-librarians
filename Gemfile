@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 gem 'sinatra'
-gem 'nokogiri'
 gem 'rack-test'
-
+gem 'rack-cache'
 

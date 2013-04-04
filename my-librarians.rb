@@ -23,17 +23,17 @@
 # Make a copy of config.json.example and edit it.
 
 require 'json'
-require 'cgi'
 require 'csv'
 require 'rss'
 
 require 'rubygems'
 require 'bundler/setup'
+require 'rack/cache'
 require 'sinatra'
-# require 'rack-cache'
 
-require 'nokogiri'
 require 'open-uri'
+
+use Rack::Cache
 
 configure do
   begin
@@ -45,12 +45,15 @@ configure do
 end
 
 get "/:type/*" do
+
+  cache_control :public, :max_age => 1800 # 30 minutes
+
   type = params[:type] # Either "subject" or "liaison"
   programs = params[:splat][0].downcase.split(",") # splat catches the wildcard
 
   logger.info "Type: #{type}"
   logger.info "Programs: #{programs}"
-  
+
   # We're going to make an RSS feed, so start it.
   rss = RSS::Maker.make("atom") do |maker|
     # TODO Move these into the config file
