@@ -44,12 +44,17 @@ configure do
   end
 end
 
-get "/:type/*" do
+get "/:type" do
 
+  puts params
+  puts params[:courses]
+  
   cache_control :public, :max_age => 1800 # 30 minutes
 
   type = params[:type] # Either "subject" or "liaison"
-  programs = params[:splat][0].downcase.split(",") # splat catches the wildcard
+  # programs = params[:splat][0].downcase.split(",") # splat catches the wildcard
+  programs = params[:courses].downcase.split(",") # splat catches the wildcard
+  puts programs
 
   logger.info "Type: #{type}"
   logger.info "Programs: #{programs}"
