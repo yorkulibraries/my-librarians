@@ -22,6 +22,38 @@
 # Configuration details are set in the file config.json.
 # Make a copy of config.json.example and edit it.
 
+# William Denton <wtd@pobox.com>
+# Usage: find-my-librarian?courses=2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2012_SC_CSE_F_1710__3_A_EN_A_LAB_03
+#
+# Call as a web service: give it a program and it will return an RSS feed
+# linking to the LibGuides profile for the right subject librarian
+# or the right reference desk
+
+# Course codes look like this (for "Romain Elegaic Poetry"):
+# 2012_AP_IT_Y_2751__9_A_EN_A_LECT_01
+#
+# Year           : 2012
+# Faculty        : AP
+# Subject        : IT
+# Period         : Y (F = fall, W = winter, SU, S1, S2 = summer)
+# ID             : 2751
+# Rubric variance: _ (if it is blank, replace with an extra underscore)
+# Credit weight  : 9
+# Section        : A
+# Language       : EN
+# Course type    : A (internal code)
+# Format         : LECT
+# Group          : 01
+
+# Other good course codes:
+# 2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01 (Introductio to Research Methods)
+# 2012_SC_CSE_F_1710__3_A_EN_A_LAB_03 (Programming for Digital Media)
+
+# (Note to self regarding other services:
+# "The moodle service breaks the standard course codes into relevant
+# pieces and passes them to the underlying feeds."
+# E.g. http://www.library.yorku.ca/eris/fetch/tagged_urls.rss?prefix=s&tag=ap/it
+
 require 'json'
 require 'csv'
 require 'rss'
@@ -46,15 +78,11 @@ end
 
 get "/:type" do
 
-  puts params
-  puts params[:courses]
-  
   cache_control :public, :max_age => 1800 # 30 minutes
 
   type = params[:type] # Either "subject" or "liaison"
   # programs = params[:splat][0].downcase.split(",") # splat catches the wildcard
   programs = params[:courses].downcase.split(",") # splat catches the wildcard
-  puts programs
 
   logger.info "Type: #{type}"
   logger.info "Programs: #{programs}"
@@ -76,9 +104,9 @@ get "/:type" do
           # row[:librarian], row[:subject_codes], row[:liaison_codes] and row[:url] are now
           # available thanks to those header commands.
           if type == "subject"
-            codes = row[:subject_codes]
+            codes = row[:subject_codes] || ""
           elsif type == "liaison"
-            codes = row[:liaison_codes]
+            codes = row[:liaison_codes] || ""
           end
           if codes.length > 0
             librarian_programs = codes.downcase.split(",")
@@ -92,6 +120,7 @@ get "/:type" do
                 item.updated = Time.now.to_s
               end
             end
+            # TODO ADD wildcard checking, eg sb/* when sb/mgmt is passed in as a course
           end
         end
       end
