@@ -17,17 +17,13 @@
 #
 # Copyright 2013 William Denton
 
-# CONFIGURING
-#
-# Configuration details are set in the file config.json.
-# Make a copy of config.json.example and edit it.
+# See README.md for details.
 
-# William Denton <wtd@pobox.com>
-# Usage: find-my-librarian?courses=2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2012_SC_CSE_F_1710__3_A_EN_A_LAB_03
-#
-# Call as a web service: give it a program and it will return an RSS feed
-# linking to the LibGuides profile for the right subject librarian
-# or the right reference desk
+# Usage: /subject?courses=2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2012_SC_CSE_F_1710__3_A_EN_A_LAB_03
+# or
+# /subject?tag=hh/psyc,ap/sosc
+
+# TODO Brief explanation here.
 
 # Course codes look like this (for "Romain Elegaic Poetry"):
 # 2012_AP_IT_Y_2751__9_A_EN_A_LECT_01
@@ -44,6 +40,20 @@
 # Course type    : A (internal code)
 # Format         : LECT
 # Group          : 01
+
+# Eris and variables passed over
+#
+# When Eris calls a web service it passes over course codes in their
+# complete form and also broken up into parts, like so:
+#
+# "GET /something?
+# courses=2012_AP_SOSC_Y_1341__9_A_EN_A_LECT_01
+# &tag=SOSC_1341,AP/SOSC,AP/sosc1341,2012_AP_SOSC_Y_1341__9_A_EN_A_LECT_01
+# &program_codes=SOSC_1341,AP/SOSC,AP/sosc1341
+#
+# The rule here is that if courses is passed in, we will use it exclusively
+# and ignore other variables, which are a mess.
+# However, if tag exists alone, we will use it.
 
 # Other good course codes:
 # 2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01 (Introductio to Research Methods)
@@ -78,11 +88,32 @@ end
 
 get "/:type" do
 
+  # Thank you Rack::Cache for making this easy.  We don't want to
+  # hammer Google Drive every time we get a request, so cache any
+  # results for 30 minutes.
   cache_control :public, :max_age => 1800 # 30 minutes
 
   type = params[:type] # Either "subject" or "liaison"
-  # programs = params[:splat][0].downcase.split(",") # splat catches the wildcard
-  programs = params[:courses].downcase.split(",") # splat catches the wildcard
+
+  programs = []
+
+  if params[:courses]
+    # If the courses parameter is passed in, used it;
+    # if not, look for tag.
+    params[:courses].split(",").each do |coursecode|
+      begin
+        elements = /(\d{4})_(\w*)_(\w*)_(\w*)_(\d*)_(.)(\d)_(\w)_(\w{2})_(\w)_(\w*)_(\d{2})/.match(coursecode)
+        raise "ERROR: Bad course code #{coursecode}" if elements.nil?
+        faculty_code = elements[2]
+        program_code = elements[3]
+        programs.push("#{faculty_code}/#{program_code}")
+      rescue Exception => e
+        logger.warn e
+      end
+    end
+  elsif params[:tag]
+    programs = params[:tag].downcase.split(",")
+  end
 
   logger.info "Type: #{type}"
   logger.info "Programs: #{programs}"
@@ -95,38 +126,44 @@ get "/:type" do
     maker.channel.about = "http://www.library.yorku.ca/"
     maker.channel.title = "My Librarian (York University Libraries)"
 
-    open(settings.config["spreadsheet_url"]) do |f|
-      unless f.status[0] == "200"
-        logger.warn "Cannot load spreadsheet: #{f.status}"
-        # TODO Fail nicely
-      else
-        CSV.parse(f.read, {:headers => true, :header_converters => :symbol}) do |row|
-          # row[:librarian], row[:subject_codes], row[:liaison_codes] and row[:url] are now
-          # available thanks to those header commands.
-          if type == "subject"
-            codes = row[:subject_codes] || ""
-          elsif type == "liaison"
-            codes = row[:liaison_codes] || ""
-          end
-          if codes.length > 0
-            librarian_programs = codes.downcase.split(",")
-            overlap = librarian_programs & programs # Elements common to both arrays
-            if ! overlap.empty?
-              logger.debug "Matched #{row[:librarian]}: #{overlap}"
-              maker.items.new_item do |item|
-                item.id = row[:librarian].sum.to_s # Checksum, to make a unique ID number
-                item.link = row[:url] || "http://www.library.yorku.ca/"
-                item.title = row[:librarian]
-                item.updated = Time.now.to_s
-              end
+    begin
+      # The request to Google Drive to read the spreadsheet might
+      # fail, so be careful.
+      open(settings.config["spreadsheet_url"]) do |f|
+        unless f.status[0] == "200"
+          logger.warn "Cannot load spreadsheet: #{f.status}"
+        else
+          CSV.parse(f.read, {:headers => true, :header_converters => :symbol}) do |row|
+            # row[:librarian], row[:subject_codes], row[:liaison_codes] and row[:url] are now
+            # available thanks to those header commands.
+            if type == "subject"
+              codes = row[:subject_codes] || ""
+            elsif type == "liaison"
+              codes = row[:liaison_codes] || ""
             end
-            # TODO ADD wildcard checking, eg sb/* when sb/mgmt is passed in as a course
+            if codes.length > 0
+              librarian_programs = codes.downcase.split(",")
+              overlap = librarian_programs & programs # Elements common to both arrays
+              if ! overlap.empty?
+                logger.debug "Matched #{row[:librarian]}: #{overlap}"
+                maker.items.new_item do |item|
+                  item.id = row[:librarian].sum.to_s # Checksum, to make a unique ID number
+                  item.link = row[:url] || "http://www.library.yorku.ca/"
+                  item.title = row[:librarian]
+                  item.updated = Time.now.to_s
+                end
+              end
+              # TODO ADD wildcard checking, eg sb/* when sb/mgmt is passed in as a course
+            end
           end
         end
       end
+    rescue Exception => e
+      logger.warn e
+      # TODO Show an error message to the user.  Can't connect to Google!?
     end
 
-    logger.debug "Items found: #{maker.items.size}"
+    # logger.debug "Items found: #{maker.items.size}"
 
     if maker.items.size == 0
       logger.debug "No items found"
@@ -169,7 +206,10 @@ get "/:type" do
       end
     end
   end
-  
+
+  # TODO What if none of that matched and the RSS feed still has 0 items?
+  # Supply the default, just in case.
+
   content_type 'application/xml'
   rss.to_s
 
@@ -177,7 +217,7 @@ end
 
 get "/*" do
   content_type "text/plain"
-  "You need to supply some parameters"
+  "You need to supply some parameters.  See https://github.com/yorkulibraries/my-librarians"
 end
 
 
