@@ -64,6 +64,9 @@
 # pieces and passes them to the underlying feeds."
 # E.g. http://www.library.yorku.ca/eris/fetch/tagged_urls.rss?prefix=s&tag=ap/it
 
+# Note about tests:
+# Some Sinatra examples here: http://rubysource.com/writing-a-feed-aggregator-with-sinatra/
+
 require 'json'
 require 'csv'
 require 'rss'
