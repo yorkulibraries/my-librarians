@@ -64,7 +64,7 @@ get "/:type" do
   if params[:courses]
     # If the courses parameter is passed in, used it;
     # if not, look for tag.
-    params[:courses].split(",").each do |coursecode|
+    params[:courses].downcase.split(",").each do |coursecode|
       begin
         elements = /(\d{4})_(\w*)_(\w*)_(\w*)_(\d*)_(.)(\d)_(\w)_(\w{2})_(\w)_(\w*)_(\d{2})/.match(coursecode)
         raise "ERROR: Bad course code #{coursecode}" if elements.nil?
