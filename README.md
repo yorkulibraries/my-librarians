@@ -7,15 +7,28 @@ TODO: Offer feed of liaison libarians as well.
 
 # Installation
 
+Requires a recent Ruby and the Bundler gem.  If you don't have it already, run
 
+    $ gem install bundler
 
-# Usage:
+Then:
 
-    /subject?courses=2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2012_SC_CSE_F_1710__3_A_EN_A_LAB_03
+    $ git clone git@github.com:yorkulibraries/my-librarians.git
+    $ cd my-librarians
+	$ cp config.json.example config.json
+    $ bundle install
+	$ bundle exec rackup config.ru
 
-    /subject?tag=hh/psyc,ap/sosc
+Edit the config file to suit your own needs, but it will work with the example and pull in what York University Libraries uses.
 
-Course codes look like this (for "Romain Elegaic Poetry"): `2012_AP_IT_Y_2751__9_A_EN_A_LECT_01`
+# Usage
+
+    $ curl http://localhost:9292/subject?courses=2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2012_SC_CSE_F_1710__3_A_EN_A_LAB_03
+    $ curl http://localhost:9292/subject?tag=hh/psyc,ap/sosc
+
+# Course codes and parameters
+
+Course codes look like this: `2012_AP_IT_Y_2751__9_A_EN_A_LECT_01` (Roman Elegaic Poetry).
 
     Year           : 2012
     Faculty        : AP
