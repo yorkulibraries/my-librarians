@@ -1,6 +1,9 @@
 {
     "spreadsheet_url": "https://docs.google.com/spreadsheet/pub?key=0Ao-FPaoAEqtUdDduMXBVWjRDN3lvZlRhRVpHTEczcVE&single=true&gid=0&output=csv",
     "course_dump_csv": "public/2012-courses-fw.csv",
+    "rss_author" : "York University Libraries",
+    "rss_about": "http://www.library.yorku.ca/",
+    "rss_channel_title": "My Librarian",
     "subject_defaults":
     [
 	{
