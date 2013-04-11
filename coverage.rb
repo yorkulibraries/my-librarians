@@ -6,7 +6,7 @@ require 'open-uri'
 
 settings = JSON.parse(File.read("config.json"))
 
-course_dump = "public/2012-courses-fw.csv"
+course_dump = settings["course_dump_csv"]
 
 faculty_programs = []
 librarians = []
@@ -17,9 +17,6 @@ CSV.parse(File.read(course_dump), {:headers => true, :header_converters => :symb
 end
 
 faculty_programs.sort!
-
-#puts faculty_programs
-#exit
 
 open(settings["spreadsheet_url"]) do |f|
   unless f.status[0] == "200"
@@ -37,8 +34,6 @@ librarians.each do |l|
 end
 
 subjects_covered.flatten!.sort!
-
-# exit
 
 not_covered = []
 

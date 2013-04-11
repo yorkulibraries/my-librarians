@@ -1,5 +1,6 @@
 {
     "spreadsheet_url": "https://docs.google.com/spreadsheet/pub?key=0Ao-FPaoAEqtUdDduMXBVWjRDN3lvZlRhRVpHTEczcVE&single=true&gid=0&output=csv",
+    "course_dump_csv": "public/2012-courses-fw.csv",
     "subject_defaults":
     [
 	{
