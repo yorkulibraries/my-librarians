@@ -19,45 +19,6 @@
 
 # See README.md for details.
 
-# Usage: /subject?courses=2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2012_SC_CSE_F_1710__3_A_EN_A_LAB_03
-# or
-# /subject?tag=hh/psyc,ap/sosc
-
-# TODO Brief explanation here.
-
-# Course codes look like this (for "Romain Elegaic Poetry"):
-# 2012_AP_IT_Y_2751__9_A_EN_A_LECT_01
-#
-# Year           : 2012
-# Faculty        : AP
-# Subject        : IT
-# Period         : Y (F = fall, W = winter, SU, S1, S2 = summer)
-# ID             : 2751
-# Rubric variance: _ (if it is blank, replace with an extra underscore)
-# Credit weight  : 9
-# Section        : A
-# Language       : EN
-# Course type    : A (internal code)
-# Format         : LECT
-# Group          : 01
-
-# Eris and variables passed over
-#
-# When Eris calls a web service it passes over course codes in their
-# complete form and also broken up into parts, like so:
-#
-# "GET /something?
-# courses=2012_AP_SOSC_Y_1341__9_A_EN_A_LECT_01
-# &tag=SOSC_1341,AP/SOSC,AP/sosc1341,2012_AP_SOSC_Y_1341__9_A_EN_A_LECT_01
-# &program_codes=SOSC_1341,AP/SOSC,AP/sosc1341
-#
-# The rule here is that if courses is passed in, we will use it exclusively
-# and ignore other variables, which are a mess.
-# However, if tag exists alone, we will use it.
-
-# Other good course codes:
-# 2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01 (Introductio to Research Methods)
-# 2012_SC_CSE_F_1710__3_A_EN_A_LAB_03 (Programming for Digital Media)
 
 # (Note to self regarding other services:
 # "The moodle service breaks the standard course codes into relevant

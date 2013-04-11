@@ -6,7 +6,7 @@ require 'open-uri'
 
 settings = JSON.parse(File.read("config.json"))
 
-course_dump = "2012-courses-fw.csv"
+course_dump = "public/2012-courses-fw.csv"
 
 faculty_programs = []
 librarians = []
