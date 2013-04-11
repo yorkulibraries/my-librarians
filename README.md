@@ -39,7 +39,7 @@ My Librarians uses the [Sinatra](http://www.sinatrarb.com/) framework, so it's e
         CustomLog ${APACHE_LOG_DIR}/my-librarians.access.log combined
     </VirtualHost>
 
-Live example: [http://my-librarians.miskatonic.org/subject?2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2012_SC_CSE_F_1710__3_A_EN_A_LAB_03](subject librarians for 2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2012_SC_CSE_F_1710__3_A_EN_A_LAB_03).
+Live example: (subject librarians for 2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2012_SC_CSE_F_1710__3_A_EN_A_LAB_03)[http://my-librarians.miskatonic.org/subject?2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2012_SC_CSE_F_1710__3_A_EN_A_LAB_03]
 
 ## Course codes and parameters
 
