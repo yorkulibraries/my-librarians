@@ -146,17 +146,26 @@ get "/:type" do
             end
             if codes.length > 0
               librarian_programs = codes.downcase.split(",")
-              overlap = librarian_programs & programs # Elements common to both arrays
-              if ! overlap.empty?
-                logger.debug "Matched #{row[:librarian]}: #{overlap}"
-                maker.items.new_item do |item|
-                  item.id = row[:librarian].sum.to_s # Checksum, to make a unique ID number
-                  item.link = row[:url] || "http://www.library.yorku.ca/"
-                  item.title = row[:librarian]
-                  item.updated = Time.now.to_s
+              programs.each do |p|
+                # For each program passed in, see if there's an
+                # exact match for it in this librarian's list of
+                # what they cover, or if it matches a wildcard.
+                p_faculty = p[0..1]
+                if librarian_programs.include? p or librarian_programs.include? "#{p_faculty}/*"
+                  logger.debug "Matched #{row[:librarian]}: #{p}"
+                  # If it does match, don't add it if the librarian is already
+                  # in the RSS feed.  Use the checksum in the id field to confirm.
+                  known_ids = maker.items.map {|i| i.id}
+                  unless known_ids.any? {|id| "<id>#{row[:librarian].sum.to_s}</id>" =~ /#{id}/}
+                    maker.items.new_item do |item|
+                      item.id = row[:librarian].sum.to_s # Checksum, to make a unique ID number
+                      item.link = row[:url] || "http://www.library.yorku.ca/"
+                      item.title = row[:librarian]
+                      item.updated = Time.now.to_s
+                    end
+                  end
                 end
               end
-              # TODO ADD wildcard checking, eg sb/* when sb/mgmt is passed in as a course
             end
           end
         end
@@ -169,8 +178,8 @@ get "/:type" do
     # logger.debug "Items found: #{maker.items.size}"
 
     if maker.items.size == 0
-      logger.debug "No items found"
       # No matches were found!  Supply the defaults
+      logger.debug "No items found; adding in defaults"
       # TODO Move all the defaults into the config file
       url = ""
       title = ""
