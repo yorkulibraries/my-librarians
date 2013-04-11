@@ -1,11 +1,10 @@
-my-librarians
-=============
+# My Librarians
 
 My Librarians is a web service that provides a personalized RSS feeds of subject librarians.  Given one or more course codes, it will check a Google Drive spreadsheet and returns lists of librarians (or, as a fallback, reference desks) that cover the relevant subject(s).
 
 TODO: Offer feed of liaison libarians as well.
 
-# Installation
+## Installation
 
 My Librarians requires a recent Ruby and the Bundler gem.  If you don't have it already, run
 
@@ -21,12 +20,12 @@ Then:
 
 Edit the config file to suit your own needs, but it will work with the example and pull in what York University Libraries uses.
 
-# Usage
+## Usage
 
     $ curl http://localhost:9292/subject?courses=2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2012_SC_CSE_F_1710__3_A_EN_A_LAB_03
     $ curl http://localhost:9292/subject?tag=hh/psyc,ap/sosc
 
-# Course codes and parameters
+## Course codes and parameters
 
 York University course codes are all listed at [http://coursecode.yorku.ca/](http://coursecode.yorku.ca/).
 
@@ -59,7 +58,7 @@ When Eris calls a web service it passes over course codes in their complete form
 
 The rule in My Librarians is that if courses is passed in (with one or more full course codes, comma-separated) it will be used exclusively and the other variables will be ignored because they are too messy. However, if tag exists alone (with one or more short-form tags, comma-separated), we will use it.
 
-# Coverage
+## Coverage
 
 It's helpful to know which courses offered don't appear to have a subject librarian.  There is a file in `public` that is a CSV dump of all courses offered at York (currently, the 2012 fall and winter offerings). It looks like this:
 
