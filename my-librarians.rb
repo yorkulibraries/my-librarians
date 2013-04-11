@@ -84,11 +84,10 @@ get "/:type" do
 
   # We're going to make an RSS feed, so start it.
   rss = RSS::Maker.make("atom") do |maker|
-    # TODO Move these into the config file
-    maker.channel.author = "York University Libraries"
+    maker.channel.author = settings.config["rss_author"]
     maker.channel.updated = Time.now.to_s
-    maker.channel.about = "http://www.library.yorku.ca/"
-    maker.channel.title = "My Librarian (York University Libraries)"
+    maker.channel.about = settings.config["rss_about"]
+    maker.channel.title = settings.config["rss_channel_title"]
 
     begin
       # The request to Google Drive to read the spreadsheet might

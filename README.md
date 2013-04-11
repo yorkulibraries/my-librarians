@@ -1,6 +1,6 @@
 # My Librarians
 
-My Librarians is a web service that provides a personalized RSS feeds of subject librarians.  Given one or more course codes, it will check a Google Drive spreadsheet and returns lists of librarians (or, as a fallback, reference desks) that cover the relevant subject(s).
+My Librarians is a web service that provides a personalized RSS feeds of subject librarians.  Given one or more course codes, it will check a [Google Drive spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0Ao-FPaoAEqtUdDduMXBVWjRDN3lvZlRhRVpHTEczcVE#gid=0) and returns lists of librarians (or, as a fallback, reference desks) that cover the relevant subject(s).
 
 TODO: Offer feed of liaison libarians as well.
 
@@ -20,10 +20,25 @@ Then:
 
 Edit the config file to suit your own needs, but it will work with the example and pull in what York University Libraries uses.
 
-## Usage
+Test it works:
 
     $ curl http://localhost:9292/subject?courses=2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2012_SC_CSE_F_1710__3_A_EN_A_LAB_03
     $ curl http://localhost:9292/subject?tag=hh/psyc,ap/sosc
+
+My Librarians uses the [Sinatra](http://www.sinatrarb.com/) framework, so it's easily deployed however you like to do that, for example with [Phusion Passenger](https://www.phusionpassenger.com/).  The virtual host entry in an Apache config file might look like this (with a duplicated `my-libarians` because the Git repo is inside the outer one):
+
+    <VirtualHost *:80>
+        ServerName my-librarians.miskatonic.org
+        DocumentRoot /var/www/my-librarians/my-librarians/public
+        <Directory /var/www/my-librarians/my-librarians>
+            Allow from all
+            Options -MultiViews
+        </Directory>
+        ErrorLog ${APACHE_LOG_DIR}/my-librarians.error.log
+        LogLevel warn
+        CustomLog ${APACHE_LOG_DIR}/my-librarians.access.log combined
+    </VirtualHost>
+
 
 ## Course codes and parameters
 
