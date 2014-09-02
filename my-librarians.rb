@@ -100,9 +100,9 @@ get "/:type" do
             # row[:librarian], row[:subject_codes], row[:liaison_codes] and row[:url] are now
             # available thanks to those header commands.
             if type == "subject"
-              codes = row[:subject_codes] || ""
+              codes = row[:subject_codes].rstrip || ""
             elsif type == "liaison"
-              codes = row[:liaison_codes] || ""
+              codes = row[:liaison_codes].rstrip || ""
             end
             if codes.length > 0
               librarian_programs = codes.downcase.split(",")
@@ -197,4 +197,3 @@ end
 #
 # Helper methods
 #
-

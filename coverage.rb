@@ -32,7 +32,7 @@ end
 subjects_covered = []
 
 librarians.each do |l|
-  subjects_covered << l[:subject_codes].upcase.split(",")  unless l[:subject_codes].nil?
+  subjects_covered << l[:subject_codes].rstrip.upcase.split(",")  unless l[:subject_codes].nil?
 end
 
 subjects_covered.flatten!.sort!
