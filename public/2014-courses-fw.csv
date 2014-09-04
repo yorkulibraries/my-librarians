@@ -519,23 +519,23 @@ AP,GKM,1000,Elementary Modern Greek
 AP,GKM,2000,Intermediate Modern Greek
 AP,GKM,4600,"Topics in Modern Greek Culture: Literature, Cinema and Theatre"
 AP,GWST,1501,Introduction to Gender and Women's Studies
-AP,GWST,1502,Introduction aux Çtudes des femmes et de genre
+AP,GWST,1502,Introduction aux √©tudes des femmes et de genre
 AP,GWST,1502,Introduction to Gender and Women's Studies
 AP,GWST,2511,"Sex, Gender and Popular Culture"
 AP,GWST,2512,"Race, Gender & Sexuality"
 AP,GWST,2513,Mothering and Motherhood
 AP,GWST,2600,Introduction to Critical Sexualities
-AP,GWST,3502,Rapports sociaux d'ethnicitÇ et de sexe
+AP,GWST,3502,Rapports sociaux d'ethnicit√© et de sexe
 AP,GWST,3504,Women and Aging
 AP,GWST,3505,Gender and the City
 AP,GWST,3506,Self and Identity: Contemporary Feminist and Anti-Racist Perspectives
 AP,GWST,3509,Women Organizing
 AP,GWST,3510,Women and Work: Production and Reproduction
-AP,GWST,3511,"Femmes, sexualitÇs, pouvoir"
+AP,GWST,3511,"Femmes, sexualit√©s, pouvoir"
 AP,GWST,3511,Women's Sexualities
 AP,GWST,3520,Women and the Professions: Feminist Perspectives on Professional Work
 AP,GWST,3521,Women and Disabilities
-AP,GWST,3552,Approches fÇministes du dÇveloppement
+AP,GWST,3552,Approches f√©ministes du d√©veloppement
 AP,GWST,3555,Genealogies of Feminist Theorizing
 AP,GWST,3557,"Superstition, Religion and Sexuality"
 AP,GWST,3562,"Feminist Political Economy: Gender, Race and Class and the Politics of  Everyday Life"
@@ -794,7 +794,7 @@ AP,HUMA,4142,Contemporary Children's Culture
 AP,HUMA,4145,Fantasy and Children's Culture
 AP,HUMA,4150,Life Writing
 AP,HUMA,4160,"Storytelling, Multicentered Worlds, and Resistance"
-AP,HUMA,4180,Europe Ö la mode: Fashion and the Critical Methodologies of European Studies
+AP,HUMA,4180,Europe √† la mode: Fashion and the Critical Methodologies of European Studies
 AP,HUMA,4185,Modern Moods: Nostalgia and Melancholy
 AP,HUMA,4416,"Citing the Classics: The ""Premodern"" in Modern Japanese Literature and Film"
 AP,HUMA,4430,Living Confucianism: Confucian Philosophy and Practice in Traditional and Contemporary East Asia
@@ -1833,7 +1833,7 @@ FA,FILM,4175,Production Planning and Management II
 FA,FILM,4180,Acting and Directing II - Directing Actors for the Screen
 FA,FILM,4230,The Business of Film & Television
 FA,FILM,4280,"Film Criticism: History, Theory and Practice"
-FA,FILM,4714,Reading Culture from its Public Spaces: flÉnerie in film and photography
+FA,FILM,4714,Reading Culture from its Public Spaces: fl√¢nerie in film and photography
 FA,FILM,4800,Honours Thesis
 FA,FILM,4900,Independent Studies in Film/Television
 FA,FILM,4901,Independent Studies in Film/Television
@@ -2483,40 +2483,40 @@ GL,CDNS,1920,Comprendre le Canada contemporain
 GL,CDNS,1920,Understanding Contemporary Canada
 GL,CDNS,2618,Visual Arts of the Twentieth Century in Canada
 GL,CDNS,2930,"Regionalism, Culture and Identity in Canada"
-GL,CDNS,2930,"RÇgionalisme, culture et identitÇ au Canada"
+GL,CDNS,2930,"R√©gionalisme, culture et identit√© au Canada"
 GL,CDNS,3621,"Canada in Global Perspective/Le Canada, perspective globale"
 GL,CDNS,4622,Critical perspectives on Canadian issues/Perspectives critiques sur le Canada
 GL,DRST,1000,Here and Now: Understanding Live Theatre
 GL,DRST,1200,Smoke and Mirrors: an Introduction to Technical Theatre
 GL,DRST,1210,Performance I
-GL,DRST,1215,Performance II/Arts de la scäne II
+GL,DRST,1215,Performance II/Arts de la sc√®ne II
 GL,DRST,2617,Performing Texts: An Introduction
 GL,DRST,3000,Digital Stages: An Introduction to Scenography and 3D Computer Aided Design
 GL,DRST,3640,Art dramatique : texte et production
 GL,DRST,4619,Performing the Baroque
 GL,ECON,1000,Introduction to Economics: Microeconomics
-GL,ECON,1000,êlÇments d'Çconomique : l' analyse microÇconomique
+GL,ECON,1000,√âl√©ments d'√©conomique : l' analyse micro√©conomique
 GL,ECON,1010,Introduction to Economics: Macroeconomics
-GL,ECON,1010,êlÇments d'Çconomique : l'analyse macroÇconomique
+GL,ECON,1010,√âl√©ments d'√©conomique : l'analyse macro√©conomique
 GL,ECON,1680,Modern Economic History: A Canadian Perspective
 GL,ECON,2100,Microeconomic Theory
-GL,ECON,2200,La thÇorie macroÇconomique
+GL,ECON,2200,La th√©orie macro√©conomique
 GL,ECON,2200,Macroeconomic Theory
 GL,ECON,2710,Financial Accounting
 GL,ECON,2720,Managerial Accounting
 GL,ECON,3245,Marketing and Consumer Economics
-GL,ECON,3250,Histoire de la pensÇe Çconomique
+GL,ECON,3250,Histoire de la pens√©e √©conomique
 GL,ECON,3300,Management Economics
-GL,ECON,3350,ThÇorie financiäre
+GL,ECON,3350,Th√©orie financi√®re
 GL,ECON,3380,The Economics of Canadian Financial Institutions
 GL,ECON,3525,Cost-Benefit Analysis
-GL,ECON,3575,êconomie de l'innovation
+GL,ECON,3575,√âconomie de l'innovation
 GL,ECON,3620,The Economics of the Multinational Firm
 GL,ECON,3670,Mathematical Statistics
-GL,ECON,3672,"Capital humain, capital social et croissance Çconomique"
+GL,ECON,3672,"Capital humain, capital social et croissance √©conomique"
 GL,ECON,3710,Intermediate Financial Accounting 1
 GL,ECON,3720,Intermediate Financial Accounting 2
-GL,ECON,3920,êconomie du dÇveloppement
+GL,ECON,3920,√âconomie du d√©veloppement
 GL,ECON,4230,Advanced Economic Theory
 GL,ECON,4250,Mathematical Economics
 GL,ECON,4260,Econometrics
@@ -2569,67 +2569,67 @@ GL,ENSL,3501,Varieties of English Writing
 GL,ENSL,3502,Functional Writing
 GL,ENSL,3510,Modes of Communication
 GL,ENSL,3800,Dealing With Viewpoint
-GL,FRAN,1740,Mise Ö niveau en franáais Çcrit I : cours pour francophones
-GL,FRAN,1745,Mise Ö niveau en franáais Çcrit II : cours pour francophones
-GL,FRAN,1840,Fondements de la rÇdaction acadÇmique en franáais
-GL,FRAN,2210,Pratiques de rÇdaction : rÇsumÇ et synthäse
-GL,FRAN,2212,Pratiques de rÇdaction : l'argumentation
-GL,FRAN,2335,Initiation Ö la mÇthodologie littÇraire
-GL,FRAN,2600,Introduction Ö la linguistique gÇnÇrale et franáaise
-GL,FRAN,3214,RÇdaction administrative et technologie du texte
-GL,FRAN,3240,Stylistique franáaise I : Çcriture d'un article
-GL,FRAN,3241,Stylistique franáaise II : Çcriture d'une nouvelle
-GL,FRAN,3319,Jeux et enjeux littÇraires : du Nouveau Roman Ö aujourd'hui
-GL,FRAN,3321,Roman de la premiäre moitiÇ du XXe siäcle en France
-GL,FRAN,3602,Introduction Ö la linguistique appliquÇe
-GL,FRAN,3614,Grammaire raisonnÇe du franáais : approche Çnonciative
-GL,FRAN,3620,L'engagement de l'Çcrivain dans la France du XVIIIe siäcle
-GL,FRAN,3621,PhonÇtique/Phonologie du franáais moderne
-GL,FRAN,3642,Introduction aux linguistiques du discours et de l'Çnonciation
-GL,FRAN,3650,ThÇÉtre franáais du XXe siäcle
-GL,FRAN,3652,Syntaxe (domaine du franáais)
-GL,FRAN,3653,Morphologie (domaine du franáais)
+GL,FRAN,1740,Mise √† niveau en fran√ßais √©crit I : cours pour francophones
+GL,FRAN,1745,Mise √† niveau en fran√ßais √©crit II : cours pour francophones
+GL,FRAN,1840,Fondements de la r√©daction acad√©mique en fran√ßais
+GL,FRAN,2210,Pratiques de r√©daction : r√©sum√© et synth√®se
+GL,FRAN,2212,Pratiques de r√©daction : l'argumentation
+GL,FRAN,2335,Initiation √† la m√©thodologie litt√©raire
+GL,FRAN,2600,Introduction √† la linguistique g√©n√©rale et fran√ßaise
+GL,FRAN,3214,R√©daction administrative et technologie du texte
+GL,FRAN,3240,Stylistique fran√ßaise I : √©criture d'un article
+GL,FRAN,3241,Stylistique fran√ßaise II : √©criture d'une nouvelle
+GL,FRAN,3319,Jeux et enjeux litt√©raires : du Nouveau Roman √† aujourd'hui
+GL,FRAN,3321,Roman de la premi√®re moiti√© du XXe si√®cle en France
+GL,FRAN,3602,Introduction √† la linguistique appliqu√©e
+GL,FRAN,3614,Grammaire raisonn√©e du fran√ßais : approche √©nonciative
+GL,FRAN,3620,L'engagement de l'√©crivain dans la France du XVIIIe si√®cle
+GL,FRAN,3621,Phon√©tique/Phonologie du fran√ßais moderne
+GL,FRAN,3642,Introduction aux linguistiques du discours et de l'√©nonciation
+GL,FRAN,3650,Th√©√¢tre fran√ßais du XXe si√®cle
+GL,FRAN,3652,Syntaxe (domaine du fran√ßais)
+GL,FRAN,3653,Morphologie (domaine du fran√ßais)
 GL,FRAN,4212,Conception et publication de documents
-GL,FRAN,4533,LittÇrature fantastique et science-fiction
-GL,FRAN,4612,ThÇÉtre du XVIIIe siäcle
-GL,FRAN,4630,Francophonie et Çcriture au fÇminin
-GL,FRAN,4640,LittÇrature maghrÇbine au pluriel
-GL,FRAN,4659,Structure et changement dans l'Çvolution du franáais
-GL,FRAN,4662,Linguistique appliquÇe Ö l'apprentissage et l'enseignement du franáais langue seconde
-GL,FRLS,1035,Franáais Çcrit et oral : rÇvision des fondements
-GL,FRLS,1040,Franáais de prÇspÇcialisation I
-GL,FRLS,1041,Franáais de prÇspÇcialisation II
-GL,FRLS,1140,Franáais de prÇspÇcialisation I (courant post-immersif)
-GL,FRLS,1141,Franáais de prÇspÇcialisation II (courant post-immersif)
-GL,FRLS,1240,Franáais de prÇspÇcialisation III
-GL,FRLS,1700,"Pratiques phonÇtique, auditive et orale"
-GL,FRLS,2240,Franáais Çcrit pour spÇcialistes
-GL,FRLS,2700,Traits caractÇristiques du franáais parlÇ
-GL,FRLS,3240,Le franáais Çcrit contemporain
-GL,FRLS,3241,êcriture et style
-GL,FRLS,3700,Le franáais oral contemporain
-GL,FRLS,3925,Le franáais des stars
-GL,FSL,1000,Les bases de la communication en franáais/Basic Communication Skills in French
-GL,FSL,1100,Communication Skills and Strategies in FSL/ StratÇgies de communication en FSL
-GL,FSL,1200,Franáais intermÇdiaire : non-spÇcialistes
-GL,FSL,2000,Le franáais pour l'universitÇ I
-GL,FSL,2010,Le franáais appliquÇ Ö la discipline
-GL,FSL,2100,Le franáais pour l'universitÇ II
-GL,FSL,2200,Le franáais par l'expÇrience
+GL,FRAN,4533,Litt√©rature fantastique et science-fiction
+GL,FRAN,4612,Th√©√¢tre du XVIIIe si√®cle
+GL,FRAN,4630,Francophonie et √©criture au f√©minin
+GL,FRAN,4640,Litt√©rature maghr√©bine au pluriel
+GL,FRAN,4659,Structure et changement dans l'√©volution du fran√ßais
+GL,FRAN,4662,Linguistique appliqu√©e √† l'apprentissage et l'enseignement du fran√ßais langue seconde
+GL,FRLS,1035,Fran√ßais √©crit et oral : r√©vision des fondements
+GL,FRLS,1040,Fran√ßais de pr√©sp√©cialisation I
+GL,FRLS,1041,Fran√ßais de pr√©sp√©cialisation II
+GL,FRLS,1140,Fran√ßais de pr√©sp√©cialisation I (courant post-immersif)
+GL,FRLS,1141,Fran√ßais de pr√©sp√©cialisation II (courant post-immersif)
+GL,FRLS,1240,Fran√ßais de pr√©sp√©cialisation III
+GL,FRLS,1700,"Pratiques phon√©tique, auditive et orale"
+GL,FRLS,2240,Fran√ßais √©crit pour sp√©cialistes
+GL,FRLS,2700,Traits caract√©ristiques du fran√ßais parl√©
+GL,FRLS,3240,Le fran√ßais √©crit contemporain
+GL,FRLS,3241,√âcriture et style
+GL,FRLS,3700,Le fran√ßais oral contemporain
+GL,FRLS,3925,Le fran√ßais des stars
+GL,FSL,1000,Les bases de la communication en fran√ßais/Basic Communication Skills in French
+GL,FSL,1100,Communication Skills and Strategies in FSL/ Strat√©gies de communication en FSL
+GL,FSL,1200,Fran√ßais interm√©diaire : non-sp√©cialistes
+GL,FSL,2000,Le fran√ßais pour l'universit√© I
+GL,FSL,2010,Le fran√ßais appliqu√© √† la discipline
+GL,FSL,2100,Le fran√ßais pour l'universit√© II
+GL,FSL,2200,Le fran√ßais par l'exp√©rience
 GL,HIST,1615,Les origines des civilisations du monde
 GL,HIST,1615,The Roots of World Civilizations
 GL,HIST,1618,Ancient Roots of Modern History
-GL,HIST,2000,Comment Çtudier l'histoire
+GL,HIST,2000,Comment √©tudier l'histoire
 GL,HIST,2000,How to study History
 GL,HIST,2601,The History of Early Medieval Europe
 GL,HIST,2651,The History of the United States from the Colonial Foundations to the Present
 GL,HIST,2670,Canadian History Since 1663
 GL,HIST,2901,Introduction to Latin American History
-GL,HIST,2905,Introduction Ö l'histoire de l'Europe contemporaine de 1450 Ö nos jours
+GL,HIST,2905,Introduction √† l'histoire de l'Europe contemporaine de 1450 √† nos jours
 GL,HIST,2915,Le Moyen ?ge en Occident
 GL,HIST,2930,The 20th Century:  A Global Perspective
 GL,HIST,2935,Ancient History Part II
-GL,HIST,3205,"L'Çcole, la communautÇ et la nation au Canada"
+GL,HIST,3205,"L'√©cole, la communaut√© et la nation au Canada"
 GL,HIST,3325,Atlantic Provinces
 GL,HIST,3400,The French Revolution and the Napoleonic Era: 1789-1815
 GL,HIST,3436,Machiavelli's World
@@ -2644,25 +2644,25 @@ GL,HIST,4617,France in the Era of Decolonization
 GL,HIST,4622,Renaissance Italy
 GL,HUMA,1622,Introductory Latin
 GL,HUMA,2634,Spatiality and Spatial Representation
-GL,HUMA,3200,Photographie numÇrique
+GL,HUMA,3200,Photographie num√©rique
 GL,HUMA,3400,Art et Peinture
-GL,HUMA,3674,Cultures quÇbÇcoise et francophone canadienne
-GL,HUMA,3910,CinÇma quÇbÇcois
-GL,HUMA,3922,LittÇratures belge et luxembourgeoise de langue franáaise
+GL,HUMA,3674,Cultures qu√©b√©coise et francophone canadienne
+GL,HUMA,3910,Cin√©ma qu√©b√©cois
+GL,HUMA,3922,Litt√©ratures belge et luxembourgeoise de langue fran√ßaise
 GL,ILST,2200,"International Society: History, Philosophy and Theories"
-GL,ILST,2200,"La SociÇtÇ internationale : Histoire, Philosophie et ThÇories"
+GL,ILST,2200,"La Soci√©t√© internationale : Histoire, Philosophie et Th√©ories"
 GL,ILST,2622,"Culture, Globalization and International Civil Society"
-GL,ILST,2622,"Culture, mondialisation et sociÇtÇ civile internationale"
+GL,ILST,2622,"Culture, mondialisation et soci√©t√© civile internationale"
 GL,ILST,2655,Global Geography: Physical and Human Aspects
 GL,ILST,3250,International Economics and Development
-GL,ILST,3250,êconomie internationale et dÇveloppement
+GL,ILST,3250,√âconomie internationale et d√©veloppement
 GL,ILST,3255,Global Politics of International Development
 GL,ILST,3260,L'environnement et les relations internationales
 GL,ILST,3260,The Environment and International Relations
-GL,ILST,3505,Recherche en êtudes internationales
+GL,ILST,3505,Recherche en √âtudes internationales
 GL,ILST,3505,Research in International Studies
 GL,ILST,3650,"International Peace, Security and Human Rights"
-GL,ILST,3650,"Paix, sÇcuritÇ et droits humains internationaux"
+GL,ILST,3650,"Paix, s√©curit√© et droits humains internationaux"
 GL,ILST,3652,Introduction to International Law
 GL,ILST,3915,Indigenous Peoples in International Relations
 GL,ILST,4000,Honours Thesis
@@ -2671,17 +2671,17 @@ GL,ILST,4100,Travaux individuels
 GL,ILST,4300,Professional Internship
 GL,ILST,4300,Stage pratique professionnel
 GL,ILST,4501,Capstone Seminar
-GL,ILST,4501,SÇminaire avancÇ
+GL,ILST,4501,S√©minaire avanc√©
 GL,ILST,4505,Seminar on Globalization in the Culture Industries
 GL,ILST,4510,Annual International Studies Symposium
 GL,ILST,4618,La diplomatie
 GL,ILST,4632,"Science, Technology and International Society"
-GL,ILST,4651,International Refugee Protection/Protection internationale des rÇfugiÇs
+GL,ILST,4651,International Refugee Protection/Protection internationale des r√©fugi√©s
 GL,ILST,4675,Global civil society and international economic organizations
 GL,INEX,9100,International Exchange Credits
 GL,INEX,9200,International Exchange Credits
 GL,ITEC,2635,Creation and Management of a site on the WWW
-GL,ITEC,2635,La crÇation et la gestion d'un site sur le WWW
+GL,ITEC,2635,La cr√©ation et la gestion d'un site sur le WWW
 GL,ITEC,2915,Computer Usage and Software Applications I
 GL,ITEC,2915,L'utilisation de l'ordinateur et des logiciels d'application
 GL,LIN,2505,Romanian Language: a linguistic introduction
@@ -2693,9 +2693,9 @@ GL,MATH,1610,Introduction to Statistical Methods I
 GL,MATH,1620,Introduction to Statistical Methods II
 GL,MATH,1650,Modes of Mathematical Reasoning
 GL,MATH,1670,Fundamentals of Mathematics
-GL,MATH,1930,Calcul diffÇrentiel et intÇgral I
+GL,MATH,1930,Calcul diff√©rentiel et int√©gral I
 GL,MATH,1930,Calculus I
-GL,MATH,1940,Calcul diffÇrentiel et intÇgral II
+GL,MATH,1940,Calcul diff√©rentiel et int√©gral II
 GL,MATH,1940,Calculus II
 GL,MATH,2650,Linear Algebra I
 GL,MATH,2660,Linear Algebra II
@@ -2707,29 +2707,29 @@ GL,MATH,4230,Analyse Complexe
 GL,MODR,1711,Critical Thinking
 GL,MODR,1716,Logique formelle et informelle
 GL,MODR,2655,Introduction to Computer Music and Digital Audio Editing
-GL,NATS,1500,"Nutrition, santÇ et sociÇtÇ"
+GL,NATS,1500,"Nutrition, sant√© et soci√©t√©"
 GL,NATS,1540,Introductory Biology
 GL,NATS,1605,"Communication, Health and Environment"
 GL,NATS,1770,Heredity and Society
 GL,NATS,1800,Evolution and Ecology of Humans
 GL,NATS,1890,"Introduction to the Science, Technology and Society"
 GL,NATS,2203,Utilisation et conservation des ressources biologiques
-GL,NATS,2205,Ressources ÇnergÇtiques et santÇ des Çcosystämes
+GL,NATS,2205,Ressources √©nerg√©tiques et sant√© des √©cosyst√®mes
 GL,NATS,2300,General Ecology
 GL,NATS,2310,Conservation Biology
 GL,NATS,2920,Medieval Science:  Thought and Practice
 GL,NATS,3206,Human parasitology
-GL,NATS,3230,GÇnÇtique et santÇ humaine
+GL,NATS,3230,G√©n√©tique et sant√© humaine
 GL,NATS,4210,Environmental physiology
 GL,PHIL,1611,Introduction to Philosophy I
 GL,PHIL,1612,Introduction to Philosophy II
-GL,PHIL,1690,Introduction Ö la philosophie : les grands penseurs
+GL,PHIL,1690,Introduction √† la philosophie : les grands penseurs
 GL,PHIL,2605,"Truth, Mind and Reality"
 GL,PHIL,2615,Moral Questions and Social Policies
 GL,PHIL,2620,Reason and Feeling in Modern Philosophy
 GL,PHIL,2640,Logic
 GL,PHIL,2645,Ancient Philosophy and Political Theory
-GL,PHIL,2923,Introduction au droit et Ö la pensÇe sociale
+GL,PHIL,2923,Introduction au droit et √† la pens√©e sociale
 GL,PHIL,2923,Introduction to Law and Social Thought
 GL,PHIL,2925,Philosophie du droit
 GL,PHIL,2925,Philosophy of Law
@@ -2746,35 +2746,35 @@ GL,PHIL,4315,Topics in Metaphysics
 GL,POLS,2490,The Birth of Politics
 GL,POLS,2510,Introduction to Comparative Politics
 GL,POLS,2600,Introduction to Canadian Politics
-GL,POLS,2600,Introduction Ö la politique canadienne
+GL,POLS,2600,Introduction √† la politique canadienne
 GL,POLS,2920,Introduction aux relations internationales
 GL,POLS,2920,Introduction to International Relations
 GL,POLS,3210,Comparative Political Systems: Western Europe
 GL,POLS,3230,Government and Politics of the United States
 GL,POLS,3235,International Relations Through Film and Literature
 GL,POLS,3240,Canadian Public Policy
-GL,POLS,3360,Politics in Quebec/La politique du QuÇbec
+GL,POLS,3360,Politics in Quebec/La politique du Qu√©bec
 GL,POLS,3615,International  and Transnational Organizations
-GL,POLS,3647,MÇdias et politiques
+GL,POLS,3647,M√©dias et politiques
 GL,POLS,3660,Early Modern Political Theory
-GL,POLS,3685,Politique comparÇe des pays en voie de dÇveloppement
+GL,POLS,3685,Politique compar√©e des pays en voie de d√©veloppement
 GL,POLS,4100,Individual Thesis
 GL,POLS,4274,Migration and Citizenship
 GL,POLS,4610,The Foreign Policy of the United States
-GL,POLS,4613,IntÇgration europÇenne
+GL,POLS,4613,Int√©gration europ√©enne
 GL,POLS,4635,Topics in Law and Politics
-GL,POLS,4681,Politique et gestion de la diversitÇ
+GL,POLS,4681,Politique et gestion de la diversit√©
 GL,POLS,4682,Transnational Crime and Corruption
 GL,PSYC,2510,Introduction to Psychology
-GL,PSYC,2510,Introduction Ö la psychologie
+GL,PSYC,2510,Introduction √† la psychologie
 GL,PSYC,2520,Introduction to Experimental Psychology
-GL,PSYC,2520,Introduction Ö la psychologie expÇrimentale
-GL,PSYC,2530,Introduction Ö la statistique
+GL,PSYC,2520,Introduction √† la psychologie exp√©rimentale
+GL,PSYC,2530,Introduction √† la statistique
 GL,PSYC,2530,Introductory Statistics
 GL,PSYC,3220,Personality
 GL,PSYC,3230,Introduction to Abnormal Psychology (Psychopathology)
-GL,PSYC,3230,Introduction Ö la psychologie anormale
-GL,PSYC,3300,Introduction au dÇveloppement de l'enfant
+GL,PSYC,3230,Introduction √† la psychologie anormale
+GL,PSYC,3300,Introduction au d√©veloppement de l'enfant
 GL,PSYC,3300,Introduction to Development: Infancy and Childhood
 GL,PSYC,3310,"Introduction to Development: Adolescence, Adulthood and Aging"
 GL,PSYC,3350,Educational Psychology
@@ -2787,7 +2787,7 @@ GL,PSYC,3555,L'apprentissage et la modification du comportement
 GL,PSYC,3555,"Learning, Behaviour Modification, and Behaviour Management"
 GL,PSYC,3600,Psychology and Law
 GL,PSYC,3635,Health Psychology
-GL,PSYC,3635,Psychologie de la santÇ
+GL,PSYC,3635,Psychologie de la sant√©
 GL,PSYC,3640,Psychological Studies of Language
 GL,PSYC,3660,Introduction to Social Psychology
 GL,PSYC,3670,Psychobiologie
@@ -2795,7 +2795,7 @@ GL,PSYC,3670,Psychobiology
 GL,PSYC,3680,Evolution of Behaviour in Animals
 GL,PSYC,3690,Perception
 GL,PSYC,4000,Honours Thesis
-GL,PSYC,4000,MÇmoire avancÇ
+GL,PSYC,4000,M√©moire avanc√©
 GL,PSYC,4230,Advanced Seminar
 GL,PSYC,4240,Advanced Experimental Design
 GL,PSYC,4250,Theories and Techniques of Counselling
@@ -2821,26 +2821,26 @@ GL,SOCI,3680,Logic of Social Inquiry: Qualitative Methods
 GL,SOCI,3685,Popular Trials
 GL,SOCI,3690,The Logic of Social Inquiry: Quantitative Methods (Data Collection and Analysis)
 GL,SOCI,3692,Theories of Society
-GL,SOCI,3692,ThÇories de la sociÇtÇ
-GL,SOCI,3910,Sociologie du dÇveloppement
-GL,SOCI,3917,CommunautÇs et sociÇtÇs
+GL,SOCI,3692,Th√©ories de la soci√©t√©
+GL,SOCI,3910,Sociologie du d√©veloppement
+GL,SOCI,3917,Communaut√©s et soci√©t√©s
 GL,SOCI,4275,"Religion, Media, Culture"
 GL,SOCI,4620,Urban Environmentalism and Urban Sociology
-GL,SOCI,4625,L'Enquàte de terrain
+GL,SOCI,4625,L'Enqu√™te de terrain
 GL,SOCI,4632,"Work in a Warming World: Issues in work, labour and climate change"
 GL,SOCI,4645,"Mobs, Manias and Delusions:  Sociological and Psychoanalytic Perspectives"
-GL,SOSC,2100,Introduction to Communication: Theory and Practice/Introduction Ö la communication: ThÇorie et pratique
+GL,SOSC,2100,Introduction to Communication: Theory and Practice/Introduction √† la communication: Th√©orie et pratique
 GL,SOSC,2612,Sport in Canadian Society
 GL,SOSC,3646,English-Canadian Film
-GL,SOSC,3670,Le multiculturalisme et l'ethnicitÇ au Canada
-GL,SOSC,4505,Professional Communications Field Experience/ Communication professionnelle et expÇrience pratique
+GL,SOSC,3670,Le multiculturalisme et l'ethnicit√© au Canada
+GL,SOSC,4505,Professional Communications Field Experience/ Communication professionnelle et exp√©rience pratique
 GL,SP,1000,Elementary Spanish
-GL,SP,1000,Espagnol ÇlÇmentaire
-GL,SP,2000,Espagnol - deuxiäme niveau
+GL,SP,1000,Espagnol √©l√©mentaire
+GL,SP,2000,Espagnol - deuxi√®me niveau
 GL,SP,2000,Second Level Spanish Language
 GL,SP,2100,Introduction to Spanish Literary Texts
 GL,SP,3000,Advanced Level Studies in Spanish Language and Stylistics
-GL,SP,3000,êtude avancÇe de la langue et de la stylistique espagnoles
+GL,SP,3000,√âtude avanc√©e de la langue et de la stylistique espagnoles
 GL,SP,3300,Spanish Literature and Civilization
 GL,SP,3400,"Spanish-american Literature, Culture and Society, from the Pre-Colonial Period to the Present"
 GL,SP,3545,"Specialized Studies in Language, Composition and Translation"
@@ -2853,40 +2853,40 @@ GL,SP,4915,Specialized Spanish-English Translation: Literary and Humanistic
 GL,SP,4920,Methodology of Spanish-English/English-Spanish Translation 2: Revision and project management
 GL,SP,4925,Translation Practicum/Advanced Translation Research
 GL,TRAN,2210,Introduction to Translation into English I
-GL,TRAN,2210,Traduction gÇnÇrale I
+GL,TRAN,2210,Traduction g√©n√©rale I
 GL,TRAN,2220,Introduction to Translation into English II
-GL,TRAN,2220,Traduction gÇnÇrale II
+GL,TRAN,2220,Traduction g√©n√©rale II
 GL,TRAN,2250,Comparative Stylistics - English and French
-GL,TRAN,2250,Stylistique diffÇrentielle  du franáais et de l'anglais
+GL,TRAN,2250,Stylistique diff√©rentielle  du fran√ßais et de l'anglais
 GL,TRAN,3200,Introduction to Spanish-English translation I
 GL,TRAN,3205,Introduction to Spanish-English translation 2
-GL,TRAN,3210,Traduction spÇcialisÇe - MÇdecine et sciences de la santÇ
+GL,TRAN,3210,Traduction sp√©cialis√©e - M√©decine et sciences de la sant√©
 GL,TRAN,3210,"Translation of Specialized Texts Into English, Level I"
-GL,TRAN,3220,"Traduction spÇcialisÇe - juridique, administrative, financiäre"
+GL,TRAN,3220,"Traduction sp√©cialis√©e - juridique, administrative, financi√®re"
 GL,TRAN,3220,Translation of Specialized Texts into English II
 GL,TRAN,3260,Documentation
-GL,TRAN,3260,Documentation/Documentaci¢n
-GL,TRAN,3270,Theory in Translation/Teor°a de la traducci¢n
+GL,TRAN,3260,Documentation/Documentaci√≥n
+GL,TRAN,3270,Theory in Translation/Teor√≠a de la traducci√≥n
 GL,TRAN,3270,Theory of Translation
-GL,TRAN,3270,ThÇorie de la traduction
+GL,TRAN,3270,Th√©orie de la traduction
 GL,TRAN,3310,Problems in Professional Writing
 GL,TRAN,3500,Onsite Professional Internship
 GL,TRAN,3500,Stage professionnel en entreprise
 GL,TRAN,4225,Intro to Translation into English (cours pour Francophones)
-GL,TRAN,4225,Traductions de textes gÇnÇraux vers le franáais (cours pour Anglophones)
-GL,TRAN,4230,Traductions de textes spÇcialisÇs (cours pour Anglophones)
-GL,TRAN,4250,Technique de la rÇvision
+GL,TRAN,4225,Traductions de textes g√©n√©raux vers le fran√ßais (cours pour Anglophones)
+GL,TRAN,4230,Traductions de textes sp√©cialis√©s (cours pour Anglophones)
+GL,TRAN,4250,Technique de la r√©vision
 GL,TRAN,4250,Techniques of Textual Revision
 GL,TRAN,4310,Techniques in Business and Technical Writing I
 GL,TRAN,4320,Techniques in Business and Technical Writing II
 GL,TRAN,4330,Documentation in Business and Industry
 GL,TRAN,4370,Terminologie
 GL,TRAN,4370,Terminology
-GL,TRAN,4370,Terminology/Terminolog°a
+GL,TRAN,4370,Terminology/Terminolog√≠a
 GL,TRAN,4500,Online Professional Internship
-GL,TRAN,4500,Stage professionnel Ö distance
+GL,TRAN,4500,Stage professionnel √† distance
 GL,TRAN,4510,Advanced Translation Project/Project Management
-GL,TRAN,4510,Projet avancÇ de traduction - Gestion de projet
+GL,TRAN,4510,Projet avanc√© de traduction - Gestion de projet
 GL,TRAN,4636,"History, Societies & Translation I"
 GL,TRAN,4638,"History, Societies & Translation II"
 GS,ANTH,5000,"Graduate Seminar in Ethnographic Research, Practice, and Professionalization"
@@ -3169,15 +3169,15 @@ GS,FILM,6247,Feminist Film and Cultural Theory
 GS,FILM,6248,Red Hollywood: Marxist Cultural Politics and Popular Film
 GS,FILM,6249,Still/Moving: Cinema and Photography
 GS,FILM,7000,Cinema and Media Studies:  Key Concepts
-GS,FREN,5228,Annie Ernaux: : la mÇmoire vÇcue et Çcrite
+GS,FREN,5228,Annie Ernaux: : la m√©moire v√©cue et √©crite
 GS,FREN,5603,"Temps,Aspect Et Mode En Francais Cont."
 GS,FREN,5611,L'approche diachronique et l'evolution historique du francais
 GS,FREN,5712,French Reading Course for Academic Purposes (Basic)
 GS,FREN,5713,French Reading Course for Academic Purposes (Intermediate)
 GS,FREN,5900,Cours de lecture dirigee
 GS,FREN,6206,Introduction to textology--Introduction B la textologie
-GS,FREN,6606, SÇminaire sur l®analyse du discours: continuum entre textualitÇ et oralitÇ
-GS,FREN,6900,Cours de lecture dirigÇe / Cours individuel (Directed reading)
+GS,FREN,6606, S√©minaire sur l®analyse du discours: continuum entre textualit√© et oralit√©
+GS,FREN,6900,Cours de lecture dirig√©e / Cours individuel (Directed reading)
 GS,GEOG,5010,Seminar In The Theory Of Geography
 GS,GEOG,5011,Graduate Colloquium
 GS,GEOG,5015,Remote Sensing and Image Processing for Geographical Analysis and Environmental Monitoring
@@ -3336,7 +3336,7 @@ GS,INTE,5855,French Into English II
 GS,INTE,5855,Mandarin Into English II
 GS,INTE,5855,Portuguese into English II
 GS,INTE,5855,Spanish Into English II
-GS,INTE,5860, English into Portuguese I
+GS,INTE,5860,English into Portuguese I
 GS,INTE,5860,English Into French I
 GS,INTE,5860,English Into Mandarin I
 GS,INTE,5860,English Into Spanish I
@@ -3635,19 +3635,19 @@ GS,PHYS,7001,Ph.D. Research Ecaluation
 GS,PHYS,7001,Ph.D. Research Evaluation
 GS,PIA,6000,Public Management
 GS,PIA,6001,The Policy Process
-GS,PIA,6002,êconomie et politique publique
-GS,PIA,6003,MÇthodes de recherche
+GS,PIA,6002,√âconomie et politique publique
+GS,PIA,6003,M√©thodes de recherche
 GS,PIA,6100,Capstone Seminar
 GS,PIA,6200,Colloquium:  Canada and its Place in the World
 GS,PIA,6303,Global Migration & Canadian Law & Policy
 GS,PIA,6308,Le droit international et les organisations internationales
-GS,PIA,6313,"FÇminisme, citoyennetÇ politique et action collective"
+GS,PIA,6313,"F√©minisme, citoyennet√© politique et action collective"
 GS,PIA,6314,The Environmental Crisis: International and Public Policy Implications
 GS,PIA,6320,Human Rights and Civil Liberties
 GS,PIA,6321,Indigenous Language Policy in Canada and the Americas
-GS,PIA,6322,La gestion de la diversitÇ
+GS,PIA,6322,La gestion de la diversit√©
 GS,PIA,6328,Institutions and Instruments of Public Finance in Canada
-GS,PIA,6333,"Histoire gÇopolitique du Moyen-Orient, de la chute de l®empire ottoman au printemps arabe."
+GS,PIA,6333,"Histoire g√©opolitique du Moyen-Orient, de la chute de l®empire ottoman au printemps arabe."
 GS,POLS,5055,The Idea of Democracy
 GS,POLS,5071, The Politics of Cyberspace:  Information and Power in the Surveillance Society
 GS,POLS,5090,Classical Marxist Theory
@@ -3723,7 +3723,7 @@ GS,PSYC,6225,Computational Models of Visual Perception
 GS,PSYC,6229,Statistical Modelling of Perception and Cognition
 GS,PSYC,6245,Complex Systems Approach to Interpersonal Change
 GS,PSYC,6253,"Fundamentals of Neuroscience II: Circuits, Systems and Behaviour"
-GS,PSYC,6265,Perception and Action®/Same as Biology 5136 3.0 and Kinesiology & Health Science 6161 3.0
+GS,PSYC,6265,Perception and Action/Same as Biology 5136 3.0 and Kinesiology & Health Science 6161 3.0
 GS,PSYC,6273,Computer Programming for Experimental Psychology
 GS,PSYC,6320,Human neuropsychology: History and Syndromes
 GS,PSYC,6400,Contemporary Issues in Personality and Social Psychology
@@ -3856,7 +3856,7 @@ GS,THST,6200,Issues in Canadian Theatre History
 GS,THST,6328,Ethnographic Methodology: Anthropology & Performance Studies
 GS,THST,6500,Independent Studies  [rubric]
 GS,TRAN,5100,Translation Studies / Traductologies
-GS,TRAN,5155,"Voyage, DÇplacement, Traduction"
+GS,TRAN,5155,"Voyage, D√©placement, Traduction"
 GS,TRAN,5300,Terminology
 GS,TRAN,5322,Specialized Translation (Medicine)
 GS,TRAN,5325,Traduction Litteraire
@@ -4207,7 +4207,7 @@ LE,EECS,4491,Simulation and Animation for Computer Games
 LE,EECS,4700,Digital Media Project
 LE,ENG,1101,"Renaissance Engineer 1: Ethics, Communication & Problem Solving"
 LE,ENG,1102,Renaissance Engineer 2 ® Engineering Design Principles
-LE,ENG,2001,"""""Engineering Projects: Management, Economics and Safety"
+LE,ENG,2001,"Engineering Projects: Management, Economics and Safety"
 LE,ENG,2002,Mechanical and Materials Engineering
 LE,ENG,3000,Professional Engineering Practice
 LE,ENG,3900,Engineering Internship Term

@@ -13,7 +13,8 @@ abort 'Please specify course dump file' unless course_dump_file
 faculty_programs = []
 librarians = []
 
-CSV.parse(File.read(course_dump_file), {:headers => true, :header_converters => :symbol}) do |row|
+# The encode! makes it deal with the file as UTF-8, which it is, but it didn't realize.  Some day encoding problems will go away.
+CSV.parse(File.read(course_dump_file).encode!('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: ''), {:headers => true, :header_converters => :symbol}) do |row|
   code = "#{row[:fac]}/#{row[:subj]}".upcase
   faculty_programs << code unless faculty_programs.include?(code)
 end
