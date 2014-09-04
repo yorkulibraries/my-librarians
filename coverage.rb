@@ -6,9 +6,7 @@ require 'open-uri'
 
 settings = JSON.parse(File.read("config.json"))
 
-# Ranges file can either be local or on the web.
-course_dump_file = ARGV.shift
-abort 'Please specify course dump file' unless course_dump_file
+course_dump_file = settings["course_dump_csv"]
 
 faculty_programs = []
 librarians = []
