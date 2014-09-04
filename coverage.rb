@@ -6,12 +6,14 @@ require 'open-uri'
 
 settings = JSON.parse(File.read("config.json"))
 
-course_dump = settings["course_dump_csv"]
+# Ranges file can either be local or on the web.
+course_dump_file = ARGV.shift
+abort 'Please specify course dump file' unless course_dump_file
 
 faculty_programs = []
 librarians = []
 
-CSV.parse(File.read(course_dump), {:headers => true, :header_converters => :symbol}) do |row|
+CSV.parse(File.read(course_dump_file), {:headers => true, :header_converters => :symbol}) do |row|
   code = "#{row[:fac]}/#{row[:subj]}".upcase
   faculty_programs << code unless faculty_programs.include?(code)
 end
@@ -30,7 +32,7 @@ end
 subjects_covered = []
 
 librarians.each do |l|
-  subjects_covered << l[:subject_codes].upcase.split(",")  unless l[:subject_codes].nil?
+  subjects_covered << l[:subject_codes].rstrip.upcase.split(",")  unless l[:subject_codes].nil?
 end
 
 subjects_covered.flatten!.sort!
@@ -53,4 +55,3 @@ STDERR.puts "Subjects covered (including wildcards): #{subjects_covered.size}"
 STDERR.puts "Faculty/programs not covered: #{not_covered.size}"
 
 puts not_covered
-

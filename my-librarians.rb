@@ -28,6 +28,11 @@
 # Note about tests:
 # Some Sinatra examples here: http://rubysource.com/writing-a-feed-aggregator-with-sinatra/
 
+# http://localhost:9292/subject?courses=2012_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2012_SC_CSE_F_1710__3_A_EN_A_LAB_03
+
+# http://localhost:9292/subject?courses=2014_HH_PSYC_F_2030__3_A_EN_A_LECT_01,2014_AP_CRIM_Y_2653__6_A_EN_A_LECT_01
+
+
 require 'json'
 require 'csv'
 require 'rss'
@@ -104,6 +109,7 @@ get "/:type" do
             elsif type == "liaison"
               codes = row[:liaison_codes] || ""
             end
+            codes.rstrip!
             if codes.length > 0
               librarian_programs = codes.downcase.split(",")
               programs.each do |p|
@@ -139,10 +145,7 @@ get "/:type" do
 
     if maker.items.size == 0
       # No matches were found!  Supply the defaults
-      logger.debug "No items found; adding in defaults"
-      # TODO Move all the defaults into the config file
-      url = ""
-      title = ""
+      logger.debug "No matches found; using defaults"
       if type=="subject"
         # TODO Make it so the choice based on whether it's
         # subject or faculty happens below, and works like
@@ -197,4 +200,3 @@ end
 #
 # Helper methods
 #
-
