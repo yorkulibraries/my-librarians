@@ -25,6 +25,8 @@ CSV.parse(File.read(course_dump_file).encode!('UTF-8', 'binary', invalid: :repla
   course_codes << code
 end
 
+structure = Hash.new
+
 # puts course_codes
 
 list_of_guides_url = 'http://api.libguides.com/api_search.php?iid=1669&type=guides'
@@ -55,12 +57,17 @@ open(list_of_guides_url) do |f|
          librarian = meta_author['content']
       end
 
+      structure[librarian] = Hash.new if structure["librarian"].nil?
+
       # The title is, among other places, in a <span id="guidetitle">.
       if guide.css("span.guidetitle").nil?
         next
       else
         title = guide.css("span.guidetitle").text
       end
+
+      structure[librarian][title] = Hash.new
+      structure[librarian][title]["url"] = url
 
       puts "Librarian: #{librarian}"
       puts "Guide: #{title} (#{url})"
@@ -122,7 +129,7 @@ open(list_of_guides_url) do |f|
         if c_tags_notok.size > 0
           puts "✗ #{c_tags_notok.size}: " + c_tags_notok.join(" ")
         end
-          unless c_tags_includes_all
+        unless c_tags_includes_all
           puts "⚠ missing c:all"
         end
         # c_tags_ok.each do |t|
@@ -133,9 +140,18 @@ open(list_of_guides_url) do |f|
         # end
         #puts "OK: " + tags_ok.join(n")
         #puts "Not OK: " + tags_notok.join(" ")
+      structure[librarian][title]["subject_tags_ok"]    = s_tags_ok
+      structure[librarian][title]["subject_tags_notok"] = s_tags_notok
+      structure[librarian][title]["course_tags_ok"]     = c_tags_ok
+      structure[librarian][title]["course_tags_notok"]  = c_tags_notok
+      structure[librarian][title]["course_tags_all"]    = c_tags_includes_all
       end
       puts
-      puts
     end
+    STDERR.puts structure
   end
 end
+
+structure.each_pair do |l, h|
+  puts l["h"]
+  end
