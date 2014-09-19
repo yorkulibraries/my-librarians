@@ -9,32 +9,37 @@
 	{
 	    "faculty": "gl",
 	    "title": "Frost Library research help",
-	    "url": "http://www.library.yorku.ca/cms/frost/"
+	    "url": "http://www.library.yorku.ca/web/frost/"
 	},
 	{
 	    "faculty": "hh",
 	    "title": "Steacie Library research help" ,
-	    "url": "http://www.library.yorku.ca/cms/steacie/"
+	    "url": "http://www.library.yorku.ca/web/steacie/"
+	},
+	{
+	    "faculty": "le",
+	    "title": "Steacie Library research help",
+	    "url": "http://www.library.yorku.ca/web/steacie/"
 	},
 	{
 	    "faculty": "lw",
 	    "title": "Law Library research help",
-	    "url": "http://www.library.yorku.ca/cms/steacie/"
+	    "url": "http://www.osgoode.yorku.ca/resources-and-services/library/"
 	},
 	{
 	    "faculty": "sb",
 	    "title": "Bronfman Library research help",
-	    "url": "http://www.library.yorku.ca/cms/steacie/"
+	    "url": "http://www.library.yorku.ca/web/bbl/"
 	},
 	{
 	    "faculty": "sc",
 	    "title": "Steacie Library research help",
-	    "url": "http://www.library.yorku.ca/cms/steacie/"
+	    "url": "http://www.library.yorku.ca/web/steacie/"
 	},
 	{
 	    "faculty": "default",
 	    "title": "Scott Library research help",
-	    "url": "http://www.library.yorku.ca/cms/scottreference/"
+	    "url": "http://www.library.yorku.ca/web/scott/"
 	}
     ],
     "liaison_defaults":
