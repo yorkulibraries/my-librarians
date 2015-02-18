@@ -62,6 +62,8 @@ About course tags: "⚠ c:all missing" means a course guide is not tagged with "
 
 TOP
 
+puts  "<p> Updated: " + Time.now.to_s + "</p>"
+
 open(list_of_guides_url) do |f|
   unless f.status[0] == "200"
     logger.warn "Cannot load URL: #{list_of_guides_url}"
